@@ -15,7 +15,7 @@ public class ServiceAerolinea {
         DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("EEEE");
 
         String formattedDate = myDateObj.format(myFormatObj);
-        //formattedDate = formattedDate.toUpperCase().charAt(0);
+        formattedDate = formattedDate.toUpperCase().charAt(0) + formattedDate.substring(1, formattedDate.length());
         return formattedDate;
     }
 }
