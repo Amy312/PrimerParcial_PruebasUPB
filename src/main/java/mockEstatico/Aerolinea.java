@@ -1,22 +1,15 @@
-package mock;
+package mockEstatico;
 
 public class Aerolinea {
-    ServiceAerolinea serviceAerolinea;
 
-    public Aerolinea() {
-        this.serviceAerolinea = new ServiceAerolinea();
-    }
 
-    public void setServiceAerolinea(ServiceAerolinea serviceAerolinea) {
-        this.serviceAerolinea = serviceAerolinea;
-    }
 
     public String reservaVuelo(String destino, int cantidad, int dia, int mes, int gestion){
         String month;
         if(cantidad < 1 || dia < 1 || gestion <1){
             return "datos invalidos";
         }
-        if(serviceAerolinea.existenPasajes(destino,cantidad)){
+        if(ServiceAerolineaS.existenPasajes(destino,cantidad)){
             switch (mes){
                 case 1:
                     month = "Enero";
@@ -59,7 +52,7 @@ public class Aerolinea {
             }
 
 
-            return "el día " + serviceAerolinea.getDay(dia, mes, gestion) + " " + dia + " " + month + " "+ gestion +
+            return "el día " + ServiceAerolineaS.getDay(dia, mes, gestion) + " " + dia + " " + month + " "+ gestion +
                     " existen " + cantidad + " pasajes para " + destino;
         } else {
             return "no existen suficientes pasajes para " + destino;
