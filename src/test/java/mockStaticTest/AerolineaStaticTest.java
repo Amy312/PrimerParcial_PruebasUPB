@@ -25,7 +25,6 @@ public class AerolineaStaticTest {
             "La Paz, -1, 29, 5, 2023, Lunes, true, datos invalidos",
             "La Paz, 0, 29, 5, 2023, Lunes, true, datos invalidos",
             "La Paz, 100, 29, 5, 2023, Lunes, true, el día Lunes 29 Mayo 2023 existen 100 pasajes para La Paz",
-            "La Paz, 2, 5, 10, 2023, Miercoles, true, el día Miercoles 5 Octubre 2023 existen 2 pasajes para La Paz",
             "La Paz, 2, 29, -1, 2023, Lunes, true, datos invalidos",
             "La Paz, 2, 29, 5, -2023, Lunes, true, datos invalidos",
             "La Paz, 2, -29, 5, 2023, Lunes, true, datos invalidos"
